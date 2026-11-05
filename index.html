@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,6 +77,24 @@
     .hero-card { position: relative; padding: 25px; border: 1px solid rgba(207,224,255,.2); border-radius: 30px; background: linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.035)); box-shadow: var(--shadow); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); transform: rotate(2deg); }
     .hero-card::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; background: linear-gradient(140deg, rgba(119,240,224,.55), transparent 40%, rgba(181,160,255,.45)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
     .profile-orb { width: 100%; aspect-ratio: 1.15; display: grid; place-items: center; border-radius: 22px; background: radial-gradient(circle at 50% 35%, rgba(119,200,255,.3), transparent 42%), linear-gradient(145deg, rgba(119,240,224,.1), rgba(181,160,255,.14)); overflow: hidden; }
+
+    /* Updated logo styling */
+    .profile-orb .brand-mark {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      overflow: hidden;
+      background: transparent;
+      box-shadow: none;
+    }
+    .profile-orb .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
     .orb-core { width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; font-size: 3.1rem; font-weight: 800; letter-spacing: -.08em; color: #eaf8ff; border: 1px solid rgba(255,255,255,.35); background: linear-gradient(145deg, rgba(255,255,255,.25), rgba(255,255,255,.035)); box-shadow: 0 0 65px rgba(119,200,255,.28), inset 0 0 30px rgba(255,255,255,.08); backdrop-filter: blur(16px); }
     .orbit { position: absolute; width: 235px; height: 235px; border: 1px solid rgba(119,200,255,.25); border-radius: 50%; transform: rotate(-25deg) scaleY(.48); }
     .orbit.two { width: 285px; height: 285px; border-color: rgba(181,160,255,.22); transform: rotate(35deg) scaleY(.45); }
@@ -175,7 +194,13 @@
           </div>
         </div>
         <aside class="hero-card" aria-label="Personal profile graphic">
-          <div class="profile-orb"><div class="orbit"></div><div class="orbit two"></div><div class="orb-core">AG</div></div>
+          <div class="profile-orb">
+            <div class="orbit"></div>
+            <div class="orbit two"></div>
+            <div class="brand-mark">
+              <img src="A.png" alt="Amir Ghadiri Logo">
+            </div>
+          </div>
           <div class="card-caption"><div><strong>Building reliable systems</strong><span>From networks to the edge</span></div><span class="mini-dot" title="Portfolio online"></span></div>
         </aside>
       </section>
@@ -204,7 +229,7 @@
           </article>
           <article class="glass project reveal">
             <div class="project-top"><span class="project-icon">⌘</span><span class="project-index">02 / INFRASTRUCTURE</span></div>
-            <h3>Network &amp; IT Infrastructure Operations</h3>
+            <h3>Hotel Network &amp; IT Infrastructure Operations</h3>
             <p>Hands-on work supporting hotel IT infrastructure, network connectivity, CCTV systems, monitoring, and day-to-day technical operations.</p>
             <div class="tags"><span class="tag">Networking</span><span class="tag">CCTV</span><span class="tag">Monitoring</span></div>
           </article>
